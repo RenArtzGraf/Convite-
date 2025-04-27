@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Convite de Casamento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Convite de casamento de Graziele e Gabriel. Confira o site dos noivos, confirmação de presença, lista de presentes e local da cerimônia.">
+  <title>Convite de Casamento - Graziele e Gabriel</title>
   <style>
     body {
       margin: 0;
@@ -25,26 +27,36 @@
       border-radius: 15px;
       display: block;
       margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .convite-container img:hover {
+      transform: scale(1.02);
     }
   </style>
 </head>
 <body>
 
 <div class="convite-container">
-  <!-- imagem do convite -->
-  <img src="convite.jpg" alt="Convite de Casamento" usemap="#image-map">
+  <!-- Imagem do convite -->
+  <img src="convite.jpg" alt="Imagem do convite de casamento de Graziele e Gabriel" usemap="#image-map">
 
-  <!-- mapa de áreas clicáveis -->
-<map name="image-map">
+  <!-- Mapa de áreas clicáveis -->
+  <map name="image-map">
     <area target="_blank" alt="Site dos Noivos" title="Site dos Noivos" href="https://noivos.casar.com/grazieleegabriel" coords="270,1061,41" shape="circle">
     <area target="_blank" alt="Como Chegar" title="Como Chegar" href="https://www.google.com/maps/place/Rua+Dom+Joaquim+de+Melo,+453" coords="391,1061,41" shape="circle">
     <area target="_blank" alt="Confirmação" title="Confirmação" href="https://noivos.casar.com/grazieleegabriel#/rsvp" coords="514,1062,42" shape="circle">
     <area target="_blank" alt="Lista de Presentes" title="Lista de Presentes" href="https://noivos.casar.com/grazieleegabriel#/presentes" coords="634,1061,42" shape="circle">
-</map>
+  </map>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+
+<!-- Script para redimensionar o mapa da imagem responsivamente -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js" defer></script>
 <script>
-  imageMapResize();
+  window.onload = function() {
+    imageMapResize();
+  }
 </script>
+
 </body>
 </html>
